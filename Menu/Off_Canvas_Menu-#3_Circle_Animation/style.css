@@ -1,0 +1,145 @@
+/*
+#ae5fce
+#5b78c7
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+/* Navigation Bar */
+.nav {
+  height: 10vh;
+  background-color: #5b78c7;
+
+}
+.nav__list {
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+.nav__list-item {
+
+}
+.nav__list-item a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Landing section */
+.landing {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.landing__title {
+  color: #ae5fce;
+  font-size: 3rem;
+  margin: 100px;
+}
+
+/*********************************/
+/* Media max-width 991px */
+@media screen and (max-width: 991px) {
+  /* Navigation Bar */
+  .nav {
+    position: relative;
+    height: 5vh;
+  }
+
+  /* Navigation List */
+  .nav__list {
+    background-color: #5b78c7;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    clip-path: circle(60px at top);
+    -webkit-clip-path: circle(60px at top);
+    transition: 0.5s all ease-in-out;
+    pointer-events: none;
+  }
+  .open {
+    clip-path: circle(1000px at top);
+    -webkit-clip-path: circle(1000px at top);
+    pointer-events: all;
+  }
+  
+  .nav__list-item {
+    font-size: 1.5rem;
+    transition: 0.5s all ease;
+    opacity: 0;
+  }
+  .nav__list-item:nth-child(1) {
+    transition-delay: 0.2s;
+  }
+  .nav__list-item:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  .nav__list-item:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+  .nav__list-item:nth-child(4) {
+    transition-delay: 0.8s;
+  }
+
+  .fade {
+    opacity: 1;
+  }
+
+  /* Arrow Icon */
+  .arrow {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%);
+  }
+  .arrow:hover {
+    cursor: pointer;
+  }
+  .arrow__bar {
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    width: 1.3rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    transition: 0.5s all ease;
+  }
+  .first-bar {
+    top: 2px;
+    transform: translate(7px, 2px) rotate(-40deg)
+  }
+  .second-bar {
+    bottom: 2px;
+    transform: translate(-7px, -2px) rotate(40deg);
+  }
+  .change.arrow__bar {
+    height: 2px
+  }
+  .change.first-bar {
+    top: 3px;
+    transform: rotate(45deg);
+  }
+  .change.second-bar {
+    bottom: 3px;
+    transform: rotate(-45deg)
+  }
+
+
+
+  /* Landing Section */
+  .landing {
+    height: 95vh;
+  }
+}
