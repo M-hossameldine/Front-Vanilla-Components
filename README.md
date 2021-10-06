@@ -1,4 +1,5 @@
 #Front Vanilla Components
+
 I was told by some some develpers before that
 > A beginner's mistake is to get his hands dirty with layouts. First you should master the micro-components then it's a Lego game.
 
