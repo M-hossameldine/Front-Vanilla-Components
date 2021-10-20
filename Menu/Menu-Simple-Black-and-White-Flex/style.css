@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black-color: #0A0A0A;
+  --gray-dark-color: #919191;
+  --gray-light-color: #D0D0D0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  min-width: 0; 
+  min-height: 0; 
+}
+
+/* Navigation Menu */
+.nav {
+  width: 80%;
+  position: fixed;
+  top: 30px;
+  left: 10%;
+}
+.nav-bar {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+}
+.nav-bar {
+  list-style: none;
+}
+.bar-1 {
+  
+}
+.bar-item {
+  padding: 15px;
+  border: solid 1px var(--gray-dark-color);
+  text-shadow: 1px 1px 2px var(--gray-dark-color);
+}
+.bar-2 .bar-item {
+  flex: 1 0 auto;
+}
+.sm-nav-open, .sm-nav-close {
+  display: none;
+  /* padding: 0;
+  border:0px;
+  width: 0px;
+  overflow: hidden; */
+  
+}
+.link {
+  text-decoration: none;
+  color: var(--gray-dark-color);
+}
+.nav-logo {
+  color: var(--gray-dark-color);
+  flex: 1 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #919191;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+.bell {
+  
+}
+
+/************* Screen size: 767px *************/
+@media screen and (max-width: 767px) {
+  .unset-item {
+    display: unset;
+  }
+}
