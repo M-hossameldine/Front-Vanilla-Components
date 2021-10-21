@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+  <title>Vanilla Bootstrap Menu</title>
+  <script src="script.js" defer></script>  
+</head>
+<body>
+  <!-- Menu Container -->
+  <nav class="navbar">
+    <!-- Brand Logo/name-->
+    <a href="" class="link navbar__title"> Brand </a>
+    
+    <!-- Menu Trigger (Mobile) -->
+    <button class="btn navbar__btn">
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Menu -->
+    <div class="menu-box">
+      <ul class="navbar__nav">
+        <li class="nav__item">
+          <a href="E" class="link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="link">Link</a>
+        </li>
+        
+        <!-- Drowpdown Menu-->
+        <li class="nav__item dropdown">
+          <a href="#" class="link dropdown__trigger">
+            Drowdown <i class="fas fa-sort-down"></i>
+          </a>
+
+          <ul class="dropdown__menu">
+            <li class="nav__item dropdown__item">
+              <a href="#" class="link">Action 1</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#" class="link">Action Action 2</a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Disabled Link -->
+        <li class="nav__item">
+          <a href="#" class="link">Disabled</a>
+        </li>
+      </ul>
+      <!-- Search bar -->
+      <form class="search-form" action="" >
+        <input class="search-form__input" type="search" placeholder="Search" autocomplete="off">
+        <button class="search__form-btn">Search</button>
+      </form>
+    </div>
+  
+  </nav>
+
+</body>
+</html>
