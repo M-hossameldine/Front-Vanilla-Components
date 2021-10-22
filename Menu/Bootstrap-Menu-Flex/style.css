@@ -22,6 +22,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.7;
+  /* background-color: #0275d8 */
 }
 
 .navbar {
@@ -66,6 +67,8 @@ body {
 .nav__item:hover {
   cursor: pointer;
 }
+
+/* Dropdown Menu */
 .dropdown {
   /* background-color: crimson; */
   position: relative;
@@ -79,28 +82,30 @@ body {
   position: absolute;
   white-space: nowrap;
   top: 105%;
+  left: 0;
   border: 1px solid #555;
   border-radius: 0.3rem;
   padding: 1rem;
   /* Hide dropdown menu */
-  opacity: 0;
+  /* opacity: 0;
   z-index: -1000;
   pointer-events: none;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; */
   /* Hide dropdown menu */
-  /* display: none; */
-  
+  transition: all 0.3s ease-in-out;
+  display: none;
+  transition-property: display;
+  transition-delay: 1s;
 }
 .dropdown__menu.expand {
   color: blue;
-  opacity: 1;
+  /* opacity: 1;
   z-index: 999;
-  pointer-events: auto;
-  /* display: unset; */
+  pointer-events: auto; */
+  display: table;
 }
-.dropdown__item:hover {
-  
-}
+
+
 /* Search form */
 .search-form {
   background-color: #fff;
@@ -128,5 +133,75 @@ body {
 .search__form-btn:hover {
   background-color: var(--c-primary);
   color: var(--c-white);
+}
+
+/******* Medium Screen Size ( 768 <= screen  < 992) *******/
+@media screen and (max-width: 992px) {
+  /* body {
+    background-color:#0275d8;
+  } */
+  .menu-box {
+    /* background-color: cadetblue; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .navbar__nav {
+    flex-grow: 0;
+    flex-basis: 60%;
+    /* background-color: #555; */
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+  }
+  .navbar__nav .nav__item {
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+  .search-form {
+    text-align: right;
+  }
+  .nabbar__nav {
+  }
+}
+
+/******* Small screen size (screen < 768) *******/
+@media screen and (max-width: 767px) {
+  .navbar {
+    justify-content: space-between;
+  }
+  .menu-box {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+  }
+  .navbar__nav {
+    flex-direction: column;
+    background-color:#0275d8;
+  }
+  .search-form {
+    background-color: #555;
+  }
+  .navbar__btn {
+    align-items: flex-start;
+    display: unset;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 0.3rem;
+    padding: 0 0.8rem;
+  }
+  /* Dropdown Menu */
+  .dropdown__menu {
+    background-color:#555;
+    text-align: left;
+    position: static;
+    padding: 0;
+  }
+  .dropdown__item {
+    /* white-space: normal; */
+    background-color:brown;
+    padding-left: 1rem;
+  }
 }
 
