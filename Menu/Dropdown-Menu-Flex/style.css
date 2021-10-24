@@ -1,9 +1,6 @@
 /* Lato */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-html {
-  font-size: 62.5%;
-}
 /* 
 Colors
 #f6f7f8 color
@@ -12,25 +9,29 @@ Colors
 
 */
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  font-size: 62.5%;
+  /* font-size: 10px; */
 }
 
-#main-nav a{
-  color: #f6f7f8;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav a {
   background-color: #254441;
-  display: flex;
-  height: 6.4rem;
+  color: #f6f7f8;
+  text-decoration: none;
   font-family: lato;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  height: 6.8rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   transition: background-color 0.4s;
-
 }
 
 #main-nav a:hover {
@@ -38,8 +39,8 @@ Colors
 }
 
 #main-nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 
 #main-nav li {
@@ -47,29 +48,31 @@ Colors
   text-align: center;
   position: relative;
 }
+
 #main-nav li:hover .submenu > li {
   display: block;
-  top: 0px;
-}
 
+}
 .submenu li {
   display: none;
-  position: absolute;
-  top: 0px;
+  position: relative;
+  top: 0;
 }
-
-.submenu {
-  display: flex;
+.submenu, .submenu-2 {
   flex-direction: column;
   position: absolute;
+}
+.submenu {
   width: 100%;
 }
-
-.submenu li {
-  position: relative;
+.submenu-2 {
+  top: 0px;
+  left: 100%;
+  min-width: 100%;
+  white-space: nowrap;
 }
 
-.submenu li:hover .submenu-2 li {
+.submenu li:hover .submenu-2 > li {
   display: block;
   opacity: 1;
 }
@@ -77,21 +80,11 @@ Colors
 .submenu-2 li {
   display: none;
   opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.submenu-2 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0px;
-  left: 100%;
-  /* white-space: nowrap; */
-  width: 120%;
+  transition: opacity 0.4s;
 }
 
 .arrow {
-  margin-left: 0.8rem;
-  font-size: 1.2rem;
   color: #eee;
+  font-size: 1.5rem;
+  margin-left: 0.8rem;
 }
