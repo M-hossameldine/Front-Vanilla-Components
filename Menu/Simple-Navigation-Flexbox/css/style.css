@@ -1,0 +1,40 @@
+header {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list__item {
+  margin: 0 1em;
+}
+.nav__link {
+  color: inherit;
+  font-size: 1.25rem;
+  /* font-size: 1.4rem; */
+  /* text-decoration: none; */
+}
+
+/* .nav__list__item + .nav__list__item {
+  margin-left: 2rem;
+} */
+
+.nav__link:hover,
+.nav__link:focus {
+  color: greenyellow;
+}
