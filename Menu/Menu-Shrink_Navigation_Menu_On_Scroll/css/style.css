@@ -1,0 +1,145 @@
+/* General styles */
+/* Set box sizing for all elements */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Remove default typogrphy margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* set body defaults */
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 1000px;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts to buttons & inputs */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container {
+  margin: 0 auto;
+}
+.max-width {
+  max-width: 65rem;
+}
+.full-width {
+  width: 100%;
+}
+.container-nav {
+  background-color: var(--nav-bg-clr);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* Customized Styling */
+/* 
+#009DAE
+#71DFE7
+#C2FFF9
+#FFE652
+*/
+/* Variables */
+:root {
+  --nav-clr: #FFE652;
+  --nav-bg-clr: #009DAE;
+  --link-active-bg-clr: #C2FFF9;
+  --link-hover-bg-clr: #71DFE7;
+}
+
+/* navbar component */
+.navbar {
+  color: var(--nav-clr);
+  background-color: var(--nav-bg-clr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar__logo {
+  flex-grow: 9999;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-stroke: 2px var(--nav-clr);
+  -webkit-text-stroke: 2px var(--nav-clr);
+  text-stroke-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  padding: 1em 0;
+  transition: all 0.5s ease;
+}
+
+.navbar.shrink .navbar__logo {
+  font-size: 1.7rem;
+  text-stroke: 1px var(--nav-clr);
+  -webkit-text-stroke: 1px var(--nav-clr);
+}
+
+/* Nav List */
+.navbar__list {
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar__item {
+  font-size: 1.25rem;
+}
+
+.navbar__link {
+  color: var(--nav-clr);
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0.6em 0.5em;
+  transition: 0.5s ease;
+}
+
+.navbar__link.active {
+  background-color: var(--link-active-bg-clr);
+  color: var(--nav-bg-clr);
+}
+
+.navbar__link:hover {
+  background-color: var(--link-hover-bg-clr);
+}
+
+/* Unrelated Content to show the scroll */
+.content {
+  font-size: 1.5rem;
+  margin-top: 11rem;
+  padding: 1rem;
+}
+
+p + p {
+  margin-top: 1rem;
+} 
