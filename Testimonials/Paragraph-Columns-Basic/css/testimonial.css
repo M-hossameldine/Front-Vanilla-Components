@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.3215rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.columns {
+  columns: 250px auto;
+  padding: 1rem;
+}
+
+.columns p {
+  background-color: pink;
+  color: #333;
+  padding: 1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.columns p strong {
+  border-bottom: 2px solid #fff;
+  display: block;
+  padding: 0.3rem;
+  margin-bottom: 0.5em;
+}
